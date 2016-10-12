@@ -23,10 +23,10 @@ when CartDiscount::Percentage
       # This for applies the discount and the message via the LineItem properties
       for item in Input.cart.line_items
         if item.variant.id == item_highest_id
-          item.change_line_price(item.line_price - item.variant.price, message: "Se aplico descuento del cupon")
+          item.change_line_price(item.line_price - item.variant.price, message: "Message of cupon applied")
           new_properties = item.properties
-          new_properties.merge!({"Descuento" => "SE APLICO EL DESCUENTO DEL CUPÓN"})
-          item.change_properties(new_properties, message: "Se aplico el descuento")
+          new_properties.merge!({"DISCOUNT" => "MESSAGE OF DISCOUNT BEING APPLIED FOR THE CLIENT"})
+          item.change_properties(new_properties, message: "The discount was applied")
         end
       end
     end
