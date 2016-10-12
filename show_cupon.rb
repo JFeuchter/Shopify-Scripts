@@ -33,8 +33,8 @@ end
 
 =begin 
   Here you can put the logic to use in case of a certain item being added to which you want to offer a certain cupon. 
-  You can the cupon to the properties message and the client will see it on the checkout.
-  Also disable the cupon in case the requirements are not met. 
+  You can add the cupon in a message to the properties and the client will see it on the checkout and on the cart if your cart is configured to show them.
+  Also disable the cupon in case the requirements are not met. Notice how in this example, Im looking for a Shipping discount
 =end
 if itemHasMoreThenQuantity?(2) || productHas85Gerber?(Money.new(cents: 1000))
   item = Input.cart.line_items.last
