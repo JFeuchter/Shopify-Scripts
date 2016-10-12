@@ -14,5 +14,9 @@ Scripts youll find in this repo:
 
 This script uses a cupon code which is set to 0% discount so it wont affect the products price. It is only used as a trigger for you to apply the discount you need. If you want to use bulk discounts you can use the term include, else you can use a "==" comparative for exact cupon names. In the case of this code, it discounts 1 product of a certain product_vendor. Thought this can be changed to fit any needs using the products: tags, product_type or vendor. Or any other information from the lineitem or variant. Also worth noticing this code discounts 1 product to the highest priced product in the cart. 
 
+2. show_cupon.rb
+
+This script uses two case senarios to detect if a cart has the necesary items for the cupon to apply. Here you can add more complex logic to the cupons requirements to be acepted. What I did here was use two functions to decide wether or not a cupon would be acepted. If its acepted, the cupon will show on the products as a property of one of them, a message if you will for the client to add upon the checkout. Its up to the client if he uses ir or not. If requires are not met, and the user tries to add the cupone then the cupon gets rejected and shows a message of why it was regected.
+
 
 MORE COMING SOON :D
