@@ -44,7 +44,7 @@ if itemHasMoreThenQuantity?(2) || productHas85Gerber?(Money.new(cents: 1000))
 elsif (Input.cart.discount_code)
   # If conditions are not met, make sure discount code is disabled.
   if Input.cart.discount_code.is_a?(CartDiscount::Shipping)
-    if Input.cart.discount_code.code.include? "DISCOUNT_CODE_NAME"
+    if Input.cart.discount_code.code.casecmp("CODE_NAME") == 0
       Input.cart.discount_code.reject(message: "Reason why the discount code was not applied")
     end 
   end
